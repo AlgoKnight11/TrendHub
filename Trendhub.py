@@ -1,7 +1,12 @@
 import mysql.connector as c
 from datetime import date
 import csv
-con=c.connect(host="localhost", user="root", passwd="bhavya")
+import os
+from dotenv import load_dotenv
+
+load_dotenv(".env")
+
+con=c.connect(host=os.environ.get("DB_HOST", "localhost"), user=os.environ.get("DB_USER", "root"), passwd=os.environ.get("DB_PASSWORD"))
 cursor=con.cursor()
 lst=[]
 new=[]
