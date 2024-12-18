@@ -305,11 +305,3 @@ while ise>3:
                     continue
     except:
         continue    
-                
-            
-        
-
-
-
-        
-        
